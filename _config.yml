@@ -1,0 +1,8 @@
+title: Currency Picker (Android)
+description: A simple library that displays a beautiful list of all the currencies allowing the user to pick the currency he wishes and provide details like currency code, symbol, iso code name and flag.
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-cayman
+
+gems:
+  - jekyll-mentions
