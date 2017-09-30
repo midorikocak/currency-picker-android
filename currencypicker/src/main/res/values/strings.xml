@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Currency Picker</string>
+    <string name="search">Search&#8230;</string>
+</resources>
