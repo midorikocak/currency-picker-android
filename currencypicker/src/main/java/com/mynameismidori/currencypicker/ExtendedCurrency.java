@@ -177,18 +177,15 @@ public class ExtendedCurrency {
     }
 
     public static ExtendedCurrency getCurrencyByISO(String currencyIsoCode) {
-        currencyIsoCode = currencyIsoCode.toUpperCase();
+        // Because the data we have is sorted by ISO codes and not by names, we must check all
+        // currencies one by one
 
-        ExtendedCurrency c = new ExtendedCurrency();
-        c.setCode(currencyIsoCode);
-
-        int i = Arrays.binarySearch(CURRENCIES, c, new ISOCodeComparator());
-
-        if (i < 0) {
-            return null;
-        } else {
-            return CURRENCIES[i];
+        for (ExtendedCurrency c : CURRENCIES) {
+            if (currencyIsoCode.equals(c.getCode())) {
+                return c;
+            }
         }
+        return null;
     }
 
     public static ExtendedCurrency getCurrencyByName(String currencyName) {
