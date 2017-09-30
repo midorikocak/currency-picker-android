@@ -67,3 +67,5 @@ String symbol = currency.getSymbol();
 
 currency.loadFlagByCode();  // attempts to associate flag to currency based on its ISO code. Used if you create your own instance of Currency.class
 ```
+
+
