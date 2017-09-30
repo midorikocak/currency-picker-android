@@ -217,8 +217,8 @@ public class ExtendedCurrency {
 
     public static class NameComparator implements Comparator<ExtendedCurrency> {
         @Override
-        public int compare(ExtendedCurrency country, ExtendedCurrency t1) {
-            return country.name.compareTo(t1.name);
+        public int compare(ExtendedCurrency currency, ExtendedCurrency t1) {
+            return currency.name.compareTo(t1.name);
         }
     }
 }
