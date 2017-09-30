@@ -6,6 +6,8 @@
 
 CurrencyPicker is a simple library that can be show a currency picker. See the example to see more detail. Heavily inspired by https://github.com/mukeshsolanki/country-picker-android
 
+Flags are from https://github.com/transferwise/currency-flags.
+
 ![](https://raw.githubusercontent.com/midorikocak/currency-picker-android/master/screenshot.png)
 
 ## How to use
