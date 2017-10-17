@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="attrs_currency">
+        <attr name="currencyCode" format="string" />
+    </declare-styleable>
+</resources>

@@ -10,10 +10,6 @@ import android.widget.TextView;
 
 import java.util.List;
 
-/**
- * Created by midorikocak on 30/09/2017.
- */
-
 public class CurrencyListAdapter extends BaseAdapter {
     private Context mContext;
     List<ExtendedCurrency> currencies;
@@ -25,6 +21,8 @@ public class CurrencyListAdapter extends BaseAdapter {
         this.currencies = currencies;
         inflater = LayoutInflater.from(context);
     }
+
+
 
     @Override
     public int getCount() {

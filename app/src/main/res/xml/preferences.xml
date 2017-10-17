@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.mynameismidori.currencypicker.CurrencyPreference
+        android:entries="@array/empty_array"
+        android:entryValues="@array/empty_array"
+        android:defaultValue="@string/default_currency"
+        android:key="selectedCurrency"
+        android:summary="Selected Currency"
+        android:title="Select Currency" />
+</PreferenceScreen>

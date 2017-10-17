@@ -21,7 +21,7 @@ import java.util.Locale;
 public class CurrencyPicker extends DialogFragment {
 
     private EditText searchEditText;
-    private ListView countryListView;
+    private ListView currencyListView;
     private CurrencyListAdapter adapter;
     private List<ExtendedCurrency> currenciesList = new ArrayList<>();
     private List<ExtendedCurrency> selectedCurrenciesList = new ArrayList<>();
@@ -57,15 +57,15 @@ public class CurrencyPicker extends DialogFragment {
             getDialog().getWindow().setLayout(width, height);
         }
         searchEditText = (EditText) view.findViewById(R.id.currency_code_picker_search);
-        countryListView = (ListView) view.findViewById(R.id.currency_code_picker_listview);
+        currencyListView = (ListView) view.findViewById(R.id.currency_code_picker_listview);
 
         selectedCurrenciesList = new ArrayList<>(currenciesList.size());
         selectedCurrenciesList.addAll(currenciesList);
 
         adapter = new CurrencyListAdapter(getActivity(), selectedCurrenciesList);
-        countryListView.setAdapter(adapter);
+        currencyListView.setAdapter(adapter);
 
-        countryListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        currencyListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

@@ -1,4 +1,8 @@
 <resources>
   <string name="app_name">Currency-Picker</string>
   <string name="pick_currency">Pick Currency</string>
+  <string name="default_currency">EUR</string>
+
+  <string-array name="empty_array">
+  </string-array>
 </resources>
