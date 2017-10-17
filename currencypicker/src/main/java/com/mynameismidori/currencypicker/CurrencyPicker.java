@@ -1,6 +1,7 @@
 package com.mynameismidori.currencypicker;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
@@ -47,7 +48,7 @@ public class CurrencyPicker extends DialogFragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.currency_picker, null);
         Bundle args = getArguments();
-        if (args != null) {
+        if (args != null && getDialog() != null) {
             String dialogTitle = args.getString("dialogTitle");
             getDialog().setTitle(dialogTitle);
 
@@ -93,6 +94,15 @@ public class CurrencyPicker extends DialogFragment {
         });
 
         return view;
+    }
+
+    @Override
+    public void dismiss() {
+        if (getDialog() != null) {
+            super.dismiss();
+        } else {
+            getFragmentManager().popBackStack();
+        }
     }
 
     public void setListener(CurrencyPickerListener listener) {

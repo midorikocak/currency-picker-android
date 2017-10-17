@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_vertical_margin"
+    >
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/currency_picker_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/pick_currency"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/currency_picker_button"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout2">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Currency Name"
+                />
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/selected_currency_name_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                tools:text="Selected Currency Name"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Currency ISO Code"
+                />
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/selected_currency_iso_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                tools:text="Selected Currency ISO Code"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Currency Symbol"
+                />
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/selected_currency_symbol_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                tools:text="Selected Currency Symbol"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Currency Flag"
+                />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/selected_currency_flag_image_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:src="@mipmap/ic_launcher"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/openFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Open Fragment"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>
