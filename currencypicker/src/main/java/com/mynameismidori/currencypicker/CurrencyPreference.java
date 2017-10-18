@@ -52,7 +52,7 @@ public class CurrencyPreference extends ListPreference implements SharedPreferen
 
         editor = preferences.edit();
 
-        setSummary(preferences.getString("selectedCurrency", "CZK"));
+        setSummary(preferences.getString(getKey(), getValue()));
 
 
         TypedArray a = context.getTheme().obtainStyledAttributes(attrs, R.styleable.attrs_currency, 0, 0);
@@ -66,7 +66,7 @@ public class CurrencyPreference extends ListPreference implements SharedPreferen
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
         if(key.equals("selectedCurrency")){
-            setSummary(sharedPreferences.getString("selectedCurrency", "CZK"));
+            setSummary(getValue());
         }
     }
 

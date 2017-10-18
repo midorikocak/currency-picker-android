@@ -1,6 +1,7 @@
 package com.mynameismidori.currencypickerexample;
 
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.FragmentActivity;
 
 public class MainActivity extends FragmentActivity {
@@ -10,7 +11,7 @@ public class MainActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
         currencyFragment = new CurrencyFragment();
         currencyFragment.setArguments(getIntent().getExtras());
 
