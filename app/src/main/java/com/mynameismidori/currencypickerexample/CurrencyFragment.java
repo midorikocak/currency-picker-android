@@ -48,7 +48,6 @@ public class CurrencyFragment extends Fragment implements View.OnClickListener, 
             mOpenPreferenceButton = (Button) view.findViewById(R.id.openPreferences);
             mCurrencyFlagImageView = (ImageView) view.findViewById(R.id.selected_currency_flag_image_view);
             mCurrencyPicker = CurrencyPicker.newInstance("Select Currency");
-            mCurrencyPicker.setCurrenciesList(preferences.getStringSet("selectedCurrencies", new HashSet<String>()));
 
             mPickCurrencyButton.setOnClickListener(this);
             mOpenFragmentButton.setOnClickListener(this);
@@ -56,6 +55,7 @@ public class CurrencyFragment extends Fragment implements View.OnClickListener, 
 
             mTextView = (TextView) view.findViewById(R.id.selectedCurrencyPreference);
             preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+            mCurrencyPicker.setCurrenciesList(preferences.getStringSet("selectedCurrencies", new HashSet<String>()));
             String selectedCurrency = preferences.getString("selectedCurrency", getString(R.string.default_currency));
             mTextView.setText(selectedCurrency);
 
