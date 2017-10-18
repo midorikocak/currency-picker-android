@@ -1,8 +1,10 @@
 package com.mynameismidori.currencypickerexample;
 
 import android.app.Activity;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
+import android.preference.PreferenceManager;
 
 import com.mynameismidori.currencypicker.CurrencyPicker;
 import com.mynameismidori.currencypicker.CurrencyPickerListener;
@@ -11,18 +13,21 @@ import com.mynameismidori.currencypicker.ExtendedCurrency;
 import com.mynameismidori.currencypicker.MultiCurrencyPreference;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 
 public class CurrencySettingsActivity extends Activity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getFragmentManager().beginTransaction().replace(android.R.id.content, new CurrencyPreferenceFragment()).commit();
-    }
+   }
 
     public static class CurrencyPreferenceFragment extends PreferenceFragment implements CurrencyPickerListener {
+        SharedPreferences preferences;
         private CurrencyPicker mCurrencyPicker;
         private CurrencyPreference currencyPreference;
         private MultiCurrencyPreference multiSelectListPreference;
@@ -34,7 +39,9 @@ public class CurrencySettingsActivity extends Activity {
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             addPreferencesFromResource(R.xml.preferences);
+            preferences = PreferenceManager.getDefaultSharedPreferences(getActivity().getApplicationContext());
             currencyPreference = (CurrencyPreference) findPreference("selectedCurrency");
+            currencyPreference.setCurrenciesList(preferences.getStringSet("selectedCurrencies",new HashSet<String>()));
             mCurrencyPicker = CurrencyPicker.newInstance("Select Currency");
             multiSelectListPreference = (MultiCurrencyPreference) findPreference("selectedCurrencies");
 

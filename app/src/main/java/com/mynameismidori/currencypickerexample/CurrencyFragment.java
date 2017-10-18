@@ -20,6 +20,7 @@ import com.mynameismidori.currencypicker.CurrencyPickerListener;
 import com.mynameismidori.currencypicker.ExtendedCurrency;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public class CurrencyFragment extends Fragment implements View.OnClickListener, CurrencyPickerListener, SharedPreferences.OnSharedPreferenceChangeListener {
     View view;
@@ -47,6 +48,7 @@ public class CurrencyFragment extends Fragment implements View.OnClickListener, 
             mOpenPreferenceButton = (Button) view.findViewById(R.id.openPreferences);
             mCurrencyFlagImageView = (ImageView) view.findViewById(R.id.selected_currency_flag_image_view);
             mCurrencyPicker = CurrencyPicker.newInstance("Select Currency");
+            mCurrencyPicker.setCurrenciesList(preferences.getStringSet("selectedCurrencies", new HashSet<String>()));
 
             mPickCurrencyButton.setOnClickListener(this);
             mOpenFragmentButton.setOnClickListener(this);

@@ -17,6 +17,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import java.util.Set;
 
 public class CurrencyPicker extends DialogFragment {
 
@@ -123,5 +124,12 @@ public class CurrencyPicker extends DialogFragment {
     public void setCurrenciesList(List<ExtendedCurrency> newCurrencies) {
         this.currenciesList.clear();
         this.currenciesList.addAll(newCurrencies);
+    }
+
+    public void setCurrenciesList(Set<String> savedCurrencies) {
+        this.currenciesList.clear();
+        for(String code : savedCurrencies){
+            this.currenciesList.add(ExtendedCurrency.getCurrencyByISO(code));
+        }
     }
 }
