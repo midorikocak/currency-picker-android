@@ -19,14 +19,6 @@
         android:gravity="center_vertical"
         android:padding="10dp" />
 
-    <RadioButton
-        android:visibility="gone"
-        android:id="@+id/radioButton"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:padding="10dp"
-        android:layout_marginLeft="10dp" />
-
     <CheckBox
         android:visibility="gone"
         android:id="@+id/checkBox"

@@ -7,4 +7,11 @@
         android:key="selectedCurrency"
         android:summary="Selected Currency"
         android:title="Select Currency" />
+    <com.mynameismidori.currencypicker.MultiCurrencyPreference
+        android:defaultValue="@array/selectedCurrencies"
+        android:entries="@array/empty_array"
+        android:entryValues="@array/empty_array"
+        android:key="selectedCurrencies"
+        android:summary="Selected currencies will be available to select at home page"
+        android:title="@string/selected_currencies" />
 </PreferenceScreen>

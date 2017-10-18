@@ -2,7 +2,21 @@
   <string name="app_name">Currency-Picker</string>
   <string name="pick_currency">Pick Currency</string>
   <string name="default_currency">EUR</string>
+  <string name="selected_currencies">Selected Currencies</string>
 
   <string-array name="empty_array">
   </string-array>
+
+  <string-array name="selectedCurrencies">
+            <item>EUR</item>
+            <item>USD</item>
+            <item>CZK</item>
+            <item>TRY</item>
+            <item>HUF</item>
+            <item>GBP</item>
+            <item>AUD</item>
+            <item>CAD</item>
+            <item>JPY</item>
+  </string-array>
+
 </resources>
