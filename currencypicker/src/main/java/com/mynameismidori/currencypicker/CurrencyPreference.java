@@ -20,6 +20,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
 import java.util.Set;
@@ -66,8 +67,11 @@ public class CurrencyPreference extends ListPreference implements SharedPreferen
 
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
-        if(key.equals("selectedCurrency")){
+        if (key.equals("selectedCurrency")) {
             setSummary(getValue());
+        }
+        if (key.equals("selectedCurrencies")) {
+            setCurrenciesList(preferences.getStringSet("selectedCurrencies", new HashSet<String>()));
         }
     }
 
@@ -145,7 +149,6 @@ public class CurrencyPreference extends ListPreference implements SharedPreferen
     }
 
 
-
     public void setCurrenciesList(List<ExtendedCurrency> newCurrencies) {
         this.currenciesList.clear();
         this.currenciesList.addAll(newCurrencies);
@@ -153,7 +156,7 @@ public class CurrencyPreference extends ListPreference implements SharedPreferen
 
     public void setCurrenciesList(Set<String> savedCurrencies) {
         this.currenciesList.clear();
-        for(String code : savedCurrencies){
+        for (String code : savedCurrencies) {
             this.currenciesList.add(ExtendedCurrency.getCurrencyByISO(code));
         }
     }
