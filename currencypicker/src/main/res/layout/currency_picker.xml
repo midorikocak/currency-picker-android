@@ -3,6 +3,8 @@
     android:id="@+id/linear_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
     android:orientation="vertical">
 
     <EditText
@@ -13,7 +15,9 @@
         android:drawableLeft="@drawable/ic_search"
         android:hint="@string/search"
         android:imeOptions="actionSearch"
-        android:maxLines="1" />
+        android:maxLines="1"
+        android:nextFocusLeft="@+id/currency_code_picker_search"
+        android:nextFocusUp="@+id/currency_code_picker_search" />
 
     <ListView
         android:id="@+id/currency_code_picker_listview"

@@ -55,6 +55,7 @@ public class CurrencyFragment extends Fragment implements View.OnClickListener, 
 
             mTextView = (TextView) view.findViewById(R.id.selectedCurrencyPreference);
             preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+            preferences.registerOnSharedPreferenceChangeListener(this);
             mCurrencyPicker.setCurrenciesList(preferences.getStringSet("selectedCurrencies", new HashSet<String>()));
             String selectedCurrency = preferences.getString("selectedCurrency", getString(R.string.default_currency));
             mTextView.setText(selectedCurrency);
@@ -81,14 +82,24 @@ public class CurrencyFragment extends Fragment implements View.OnClickListener, 
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
         if(key.equals("selectedCurrency")){
-            mTextView.setText(sharedPreferences.getString(key, "CZK"));
+            mTextView.setText(sharedPreferences.getString(key, ""));
+        }
+        if (key.equals("selectedCurrencies")) {
+            mCurrencyPicker.setCurrenciesList(preferences.getStringSet("selectedCurrencies", new HashSet<String>()));
         }
     }
 
     @Override
     public void onResume() {
         super.onResume();
+        preferences.registerOnSharedPreferenceChangeListener(this);
         mTextView.setText(preferences.getString("selectedCurrency", "CZK"));
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        preferences.registerOnSharedPreferenceChangeListener(this);
     }
 
     @Override
