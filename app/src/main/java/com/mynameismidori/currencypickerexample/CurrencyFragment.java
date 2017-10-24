@@ -56,7 +56,8 @@ public class CurrencyFragment extends Fragment implements View.OnClickListener, 
             mTextView = (TextView) view.findViewById(R.id.selectedCurrencyPreference);
             preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
             preferences.registerOnSharedPreferenceChangeListener(this);
-            mCurrencyPicker.setCurrenciesList(preferences.getStringSet("selectedCurrencies", new HashSet<String>()));
+
+
             String selectedCurrency = preferences.getString("selectedCurrency", getString(R.string.default_currency));
             mTextView.setText(selectedCurrency);
 
@@ -71,7 +72,7 @@ public class CurrencyFragment extends Fragment implements View.OnClickListener, 
             // and decide, in which order they will be displayed
             //Collections.reverse(nc);
             mCurrencyPicker.setCurrenciesList(nc);
-
+            mCurrencyPicker.setCurrenciesList(preferences.getStringSet("selectedCurrencies", new HashSet<String>()));
 
             mCurrencyPicker.setListener(this);
         }
