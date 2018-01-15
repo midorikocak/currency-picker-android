@@ -52,7 +52,7 @@ public class ExtendedCurrency {
             new ExtendedCurrency("JPY", "Japanese Yen","¥", R.drawable.flag_jpy),
             new ExtendedCurrency("KES", "Kenyan Shilling","KSh", R.drawable.flag_kes),
             new ExtendedCurrency("KRW", "Korea (South) Won","₩", R.drawable.flag_krw),
-            new ExtendedCurrency("KWD", "#N/A","#N/A", R.drawable.flag_kwd),
+            new ExtendedCurrency("KWD", "Kuwaiti Dinar","د.ك", R.drawable.flag_kwd),
             new ExtendedCurrency("KYD", "Cayman Islands Dollar","$", R.drawable.flag_kyd),
             new ExtendedCurrency("KZT", "Kazakhstan Tenge","лв", R.drawable.flag_kzt),
             new ExtendedCurrency("LAK", "Laos Kip","₭", R.drawable.flag_lak),
