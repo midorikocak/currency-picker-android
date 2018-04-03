@@ -46,7 +46,7 @@ public class ExtendedCurrency {
             new ExtendedCurrency("HUF", "Hungary Forint","Ft", R.drawable.flag_huf),
             new ExtendedCurrency("IDR", "Indonesia Rupiah","Rp", R.drawable.flag_idr),
             new ExtendedCurrency("ILS", "Israel Shekel","₪", R.drawable.flag_ils),
-            new ExtendedCurrency("INR", "India Rupee","₹", R.drawable.flag_inr),
+            new ExtendedCurrency("INR", "Indian Rupee","₹", R.drawable.flag_inr),
             new ExtendedCurrency("ISK", "Iceland Krona","kr", R.drawable.flag_isk),
             new ExtendedCurrency("JMD", "Jamaica Dollar","J$", R.drawable.flag_jmd),
             new ExtendedCurrency("JPY", "Japanese Yen","¥", R.drawable.flag_jpy),
