@@ -31,7 +31,7 @@ Step 2\. Add the dependency
 
 ```java
 dependencies {
-        compile 'com.github.midorikocak:currency-picker-android:1.1.9'
+        compile 'com.github.midorikocak:currency-picker-android:1.2.1'
 }
 ```
 
