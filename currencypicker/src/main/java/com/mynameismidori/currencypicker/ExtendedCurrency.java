@@ -13,7 +13,7 @@ public class ExtendedCurrency {
             new ExtendedCurrency("GBP", "British Pound", "£", R.drawable.flag_gbp),
             new ExtendedCurrency("CZK", "Czech Koruna", "Kč", R.drawable.flag_czk),
             new ExtendedCurrency("TRY", "Turkish Lira", "₺", R.drawable.flag_try),
-            new ExtendedCurrency("AED", "Emirati Dirham", "د.إ", R.drawable.flag_aed),
+            new ExtendedCurrency("AED", "Emirati Dirham", "AED", R.drawable.flag_aed),
             new ExtendedCurrency("AFN", "Afghanistan Afghani", "؋", R.drawable.flag_afn),
             new ExtendedCurrency("ARS", "Argentine Peso", "$", R.drawable.flag_ars),
             new ExtendedCurrency("AUD", "Australian Dollar", "$", R.drawable.flag_aud),
