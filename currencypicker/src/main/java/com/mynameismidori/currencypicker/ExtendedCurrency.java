@@ -100,7 +100,8 @@ public class ExtendedCurrency {
             new ExtendedCurrency("VEF", "Venezuela Bolívar","Bs", R.drawable.flag_vef),
             new ExtendedCurrency("VND", "Viet Nam Dong","₫", R.drawable.flag_vnd),
             new ExtendedCurrency("YER", "Yemen Rial","﷼", R.drawable.flag_yer),
-            new ExtendedCurrency("ZAR", "South Africa Rand","R", R.drawable.flag_zar)
+            new ExtendedCurrency("ZAR", "South Africa Rand","R", R.drawable.flag_zar),
+            new ExtendedCurrency("GTQ", "Guatemala Quetzal","Q", R.drawable.flag_gtq)
     };
     private String code;
     private String name;
